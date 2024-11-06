@@ -1,0 +1,8 @@
+name: streamlit
+channels:
+- conda-forge
+dependencies:
+- python
+- streamlit
+- pandas
+- protobuf==3.20.3 # for streamlit to run
