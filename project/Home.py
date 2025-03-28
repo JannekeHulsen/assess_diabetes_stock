@@ -1,26 +1,19 @@
 import streamlit as st
 
-st.markdown("# How many diabetes supplies do I need?")
+st.markdown("# Diabeteshandigheidjes")
 
 """
-I've got 8 infusion set, 11 reservoirs and 3 pump batteries left.
+Hierbij een site om berekeningen te maken die steeds terugkomen en waar ik nooit zin in heb. Om het leven wat makkelijker te maken.
 
-- How many do I need to order to cover my needs for the next three months?
-- Until when can I sustain on my current stock?
-- How many articles do I need to bring with me on holiday?
+Deze pagina's zijn er:
+- **Assess stock**: om te berekenen of ik nog genoeg diabeteshulpmiddelen in voorraad heb. Bijvoorbeeld: tot wanneer houd ik het uit met 8 infuussets en 3 sensors?
+- **When order next**: wanneer is de volgende datum dat ik waarschijnlijk een bestelling moet plaatsen?
+- **Calculate carbohydrates**: voor het afwegen van porties voor bepaalde hoeveelheden koolhydraten.
+- **Items overview**: tabel met diabeteshulpmiddelen.
 
-With this web app, I've tried to create a tool for at least myself and hopefully others to quickly make the calculations I need.
-
-Try it out!
-
-Navigate to the side bar to check out:
-- **Assess stock**: For most of your stock supply and order questions.
-- **When order next**: What is the next date you need to order?
-- **Items overview**: An overview of the diabetes supplies that are currently covered by this app.
-
-Please let me know what functionality you are missing through a [github issue](https://github.com/JannekeHulsen/assess_diabetes_stock/issues).
-In the future, I'll add other ways for contact :)
+Mocht je deze site willen gebruiken maar je mist nog bepaalde functionaliteit, laat het vooral weten via een [github issue](https://github.com/JannekeHulsen/assess_diabetes_stock/issues).
 """
 # TODO reference to subpages link in list above.
 # TODO more concrete questions for assess stock.
 # TODO formulier toevoegen die email stuurt.
+# TODO alles naar het Nederlands.
