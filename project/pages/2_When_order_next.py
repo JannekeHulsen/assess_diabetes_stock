@@ -2,11 +2,12 @@ import streamlit as st
 import pandas as pd
 from typing import Literal
 
-st.markdown("# Order date")
-st.sidebar.markdown("Hier bereken je snel wanneer de volgende besteldatum is, of tot wanneer de huidige bestelling moet dekken.")
+st.markdown("# Wanneer moet ik de volgende bestelling plaatsen?")
 
 """
-## Wanneer volgende bestelling?
+
+Hier bereken je snel wanneer de volgende besteldatum is, of tot wanneer de huidige bestelling moet dekken.
+
 Vul in: datum laatste bestelling.
 
 Berekening: datum plus kwartaal.

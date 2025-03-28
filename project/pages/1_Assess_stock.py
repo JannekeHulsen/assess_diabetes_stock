@@ -2,11 +2,13 @@ import streamlit as st
 import pandas as pd
 import math
 from utils.functions import get_item_info
-st.sidebar.markdown("Hier bereken je hoeveel spullen er nodig zijn, of het huidige aantal spullen genoeg is, of hoeveel je voor je vakantie moet bestellen.")
 
 st.markdown("# Assess diabetes stock")
 
 """
+
+Hier bereken je hoeveel spullen er nodig zijn, of het huidige aantal spullen genoeg is, of hoeveel je voor je vakantie moet bestellen.
+
 Fill in how many items you currently have, and, if applicable, the date until which you want to be covered by your next order.
 
 #####
@@ -16,6 +18,12 @@ Fill in how many items you currently have, and, if applicable, the date until wh
 > Today, I'm going to place an order that has to cover me for the next three months.
 >
 > TODO finish example
+
+I've got 8 infusion set, 11 reservoirs and 3 pump batteries left.
+
+- How many do I need to order to cover my needs for the next three months?
+- Until when can I sustain on my current stock?
+- How many articles do I need to bring with me on holiday?
 """
 
 # TODO cache!
@@ -30,8 +38,9 @@ item = st.selectbox(
 stock = st.number_input('Wat is het aantal dat je nu hebt?', value=5, min_value=0, step=1)
 order = st.number_input('Voor als je bestelling wilt checken: het aantal verpakkingen dat je bij bestelling hebt ingevuld. Als hier 0 staat, dan wordt de bestelling niet gecheckt.', value=0, min_value=0, step=1)
 till_date = st.text_input('Tot aan welke datum wil je berekenen of je genoeg voorraad hebt? Geef als JJJJ-MM-DD.', None, placeholder='YYYY-MM-DD')
-margin = st.number_input('Hoeveel marge wil je hebben voor de berekening? 0.2 staat voor 20%. 0.0 staat voor geen marge, oftewel, geen enkel onderdeel gaat verloren.',
-value=0.2, min_value=0.0, step=0.1, format="%0.1f")
+margin = st.number_input('Hoeveel marge wil je hebben voor de berekening?',
+                         value=0.2, min_value=0.0, step=0.1, format="%0.1f",
+                         help="0.2 staat voor 20%. 0.0 staat voor geen marge, oftewel, geen enkel onderdeel gaat verloren.")
 
 'Keuze: ', item
 
