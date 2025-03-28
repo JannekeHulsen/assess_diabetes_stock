@@ -2,3 +2,12 @@
 Calculate how many diabetes products I need or when I need to place a new order.
 
 Find the web app [here](https://assess-diabetes-stock.streamlit.app/).
+
+To run locally:
+```
+cd project
+```
+
+```
+streamlit run Home.py
+```
