@@ -2,6 +2,8 @@ import streamlit as st
 
 # TODO plaatje erbij om het wat begrijpelijker te maken.
 # TODO wat als je maar 1 voedingsmiddel hebt?
+# TODO toggle met keuze hoeveel voedingsmiddelen erin te gooien
+# TODO kh-lijst van veelgebruikte voedingsmiddelen (lijst keuken)
 
 st.markdown("# Hoeveel eten weeg ik af?")
 
@@ -11,6 +13,9 @@ Voorbeelden:
 - Ik wil een mueslimix maken van rozijnen en havermoutvlokken. Ik wil op 50 gram koolhydraten uitkomen. Als ik 10 gram rozijnen toevoeg, hoeveel gram havermout moet ik dan nog toevoegen?
 - Voor een mengsel van aardbeien en druiven wil ik voor eenderde aardbeien en tweederde druiven. Hoeveel gram moet ik van beide afwegen om op 30 gram koolhydraten te komen?
 """
+
+st.image("images/kh_uitleg.jpg")
+
 st.divider()
 st.write("### Vul in!")
 
@@ -63,13 +68,15 @@ st.write("Hoeveel gram koolhydraten per 100 gram?")
 col1, col2 = st.columns(2)
 with col1:
     kh_food1 = st.number_input("Eerste voedingsmiddel:", min_value=0, max_value=100, step=1)
-    kh_food2 = st.number_input('Tweede voedingsmiddel:', min_value=0, max_value=100, step=1)
+    name_food1 = st.text_input('Naam:', value="Eerste voedingsmiddel")
 
 with col2:
-    name_food1 = st.text_input('Naam:', value="Eerste voedingsmiddel")
+    kh_food2 = st.number_input('Tweede voedingsmiddel:', min_value=0, max_value=100, step=1)
     name_food2 = st.text_input("Naam:", value="Tweede voedingsmiddel")
 
-aim_kh = st.number_input("Hoeveel gram koolhydraten in totaal?", min_value=0, step=1,
+col1, col2 = st.columns(2)
+with col1:
+    aim_kh = st.number_input("Hoeveel gram koolhydraten in totaal?", min_value=0, step=1,
                          help="Hoeveel g kh moet er in het uiteindelijke mengsel zitten?")
 
 keuze = st.radio("Wil je een ratio geven of hoeveel je extra bij het tweede voedingsmiddel moet toevoegen?", ["ratio", "hoeveel extra"],
@@ -77,11 +84,11 @@ keuze = st.radio("Wil je een ratio geven of hoeveel je extra bij het tweede voed
 if keuze == "ratio":
     fraction_food1 = st.number_input('Wat is de fractie van het totaal aan koolhydraten dat moet worden opgevuld door het eerste voedingsmiddel?',
                                 value=0.5, min_value=0.0, step=0.1, max_value=1.0)
+elif keuze == "hoeveel extra":
+    m_food2 = st.number_input('Hoeveel gram van het tweede voedingsmiddel heb je al om toe te voegen?', value=0, min_value=0, step=1,
+                          help="Bijvoorbeeld 10g rozijnen.")
 else:
     fraction_food1 = None
-
-m_food2 = st.number_input('Hoeveel gram van het tweede voedingsmiddel heb je al om toe te voegen?', value=0, min_value=0, step=1,
-                          help="Bijvoorbeeld 10g rozijnen.")
 
 st.write("#####")
 

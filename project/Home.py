@@ -7,6 +7,7 @@ Hierbij een site om berekeningen te maken die steeds terugkomen en waar ik nooit
 
 Deze pagina's zijn er:
 - **Assess stock**: om te berekenen of ik nog genoeg diabeteshulpmiddelen in voorraad heb. Bijvoorbeeld: tot wanneer houd ik het uit met 8 infuussets en 3 sensors?
+- **Holiday packing**: hoeveel spullen moet ik inpakken voor mijn vakantietrip?
 - **When order next**: wanneer is de volgende datum dat ik waarschijnlijk een bestelling moet plaatsen?
 - **Calculate carbohydrates**: voor het afwegen van porties voor bepaalde hoeveelheden koolhydraten.
 - **Items overview**: tabel met diabeteshulpmiddelen.
