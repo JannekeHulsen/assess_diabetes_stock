@@ -14,7 +14,7 @@ Voorbeelden:
 - Voor een mengsel van aardbeien en druiven wil ik voor eenderde aardbeien en tweederde druiven. Hoeveel gram moet ik van beide afwegen om op 30 gram koolhydraten te komen?
 """
 
-st.image("images/kh_uitleg.jpg")
+#st.image("images/kh_uitleg.jpg")
 
 st.divider()
 st.write("### Vul in!")
