@@ -84,10 +84,13 @@ keuze = st.radio("Wil je een ratio geven of hoeveel je extra bij het tweede voed
 if keuze == "ratio":
     fraction_food1 = st.number_input('Wat is de fractie van het totaal aan koolhydraten dat moet worden opgevuld door het eerste voedingsmiddel?',
                                 value=0.5, min_value=0.0, step=0.1, max_value=1.0)
+    m_food2 = 0
 elif keuze == "hoeveel extra":
     m_food2 = st.number_input('Hoeveel gram van het tweede voedingsmiddel heb je al om toe te voegen?', value=0, min_value=0, step=1,
                           help="Bijvoorbeeld 10g rozijnen.")
+    fraction_food1 = None
 else:
+    m_food2 = 0
     fraction_food1 = None
 
 st.write("#####")

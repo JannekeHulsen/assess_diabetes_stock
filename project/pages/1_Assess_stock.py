@@ -3,11 +3,11 @@ import pandas as pd
 import math
 from utils.functions import get_item_info
 
-st.markdown("# Assess diabetes stock")
+st.markdown("# Maak een inschatting van de diabetesvoorraad")
 
 """
 
-Hier bereken je hoeveel spullen er nodig zijn, of het huidige aantal spullen genoeg is, of hoeveel je voor je vakantie moet bestellen.
+Hier bereken je hoeveel spullen er nodig zijn. Of het huidige aantal spullen genoeg is.
 
 Fill in how many items you currently have, and, if applicable, the date until which you want to be covered by your next order.
 
@@ -23,7 +23,6 @@ I've got 8 infusion set, 11 reservoirs and 3 pump batteries left.
 
 - How many do I need to order to cover my needs for the next three months?
 - Until when can I sustain on my current stock?
-- How many articles do I need to bring with me on holiday?
 """
 
 # TODO cache!
