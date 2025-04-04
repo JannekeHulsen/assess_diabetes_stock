@@ -1,4 +1,5 @@
 import streamlit as st
+from utils.functions import get_regular_carbs
 
 # TODO plaatje erbij om het wat begrijpelijker te maken.
 # TODO wat als je maar 1 voedingsmiddel hebt?
@@ -110,3 +111,10 @@ if st.button('Bereken'):
         st.write(f"Voor {aim_kh}g kh totaal:")
         st.write(f"{name_food1}: {m_food1} g")
         st.write(f"{name_food2}: {m_food2} g")
+
+st.divider()
+
+st.markdown("### Veelgebruikt")
+
+kh_df = get_regular_carbs()
+kh_df
